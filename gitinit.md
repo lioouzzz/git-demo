@@ -36,7 +36,7 @@ git branch       檢視分支
 git branch 名稱   建立分支
 git switch 檔案名稱  切換分支
 git blame 檔案名稱   找出檔案程式碼哪一行是誰寫的
-
+git merge         合併分支
 
 checkout可以救回檔案也可以切換分支，避免混淆
 所以有了 restore 和switch 更容易辨別
@@ -47,13 +47,18 @@ git log --oneline
 建議裝外掛 git graph
 (vscode也有 view --->source control )
 
+
 ### branch 分支
 * 是HEAD 上帝視角
-分支只是一張貼在某個Commit上的貼紙
-分支有 main master
+- 分支只是一張貼在某個Commit上的貼紙
+- 分支有 main master
+
+#### merge合併
+- 合併分支，要先用git switch切換控制權，再git merge 分支， 控制權會往前移
+- 如果 git merge 控制權，終端機會顯示最新狀態
+- merge，可以保留歷史紀錄，節點合併節點越多，越混亂
 
 
-git merge 合併分支 (可以保留歷史紀錄 節點合併節點越多 越混亂)
 
 有分支交流道
 git merge xx --no-ff -m ""
